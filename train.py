@@ -30,4 +30,9 @@ print("precision:",precision)
 print("recall:",recall)
 print("f1:",f1)
 
+metrics_df = pd.DataFrame({
+  'Metric' : ['accuracy','precision','recall','f1'],
+  'Score' : [accuracy,precision,recall,f1]
+})
+metrics_df.to_csv('metrics1.csv',index=False)
 joblib.dump(mod_dt, "model.joblib")
