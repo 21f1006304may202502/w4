@@ -34,5 +34,5 @@ metrics_df = pd.DataFrame({
   'Metric' : ['accuracy','precision','recall','f1'],
   'Score' : [accuracy,precision,recall,f1]
 })
-metrics_df.to_csv('metrics2.csv',index=True)
+metrics_df.to_csv('metrics.csv',index=False)
 joblib.dump(mod_dt, "model.joblib")
